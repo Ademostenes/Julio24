@@ -7,8 +7,7 @@ router.get('/', usrController.getAllUsers);
 router.get('/:id',usrController.getUsrById);
 router.post('/', usrController.crearUsuario);
 router.put('/:id',usrController.updateUsuario);
-/*
-router.delete('/:id', usrController.deleteUsr);
-*/
+router.delete('/:id', usrController.borrarUsuario);
+
 
 module.exports = router;
