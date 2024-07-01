@@ -1,0 +1,21 @@
+{
+    "usrName": "dacoglanis",
+    "usrPass": "Ratata-128",
+    "nombres": "Demostenes",
+    "apellido": "Acoglanis",
+    "mail": "dacoglanis@gmail.com",
+    "cel": "+54 (388) 504-9305",
+    "idNumero": "28652782",
+    "countrId": 12
+}
+
+{
+    "usrName": "hAmador",
+    "usrPass": "amaDor0107",
+    "nombres": "Javier",
+    "apellido": "Amador",
+    "mail": "hamador@gmail.com",
+    "cel": "+54 (388) 554-5505",
+    "idNumero": "26552478",
+    "countrId": 23
+}

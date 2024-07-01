@@ -27,7 +27,7 @@ const crearUsuario = (req, res) => {
     });
 };
 
-const updateUsuario = (req, res) => {
+const updateUsuario = (req,res) => {
     const { id } = req.params;
     const {usrName, usrPass, nombres, apellido, mail, cel, idNumero, countrId} = req.body;
     const sql = 'UPDATE usuario SET userName = ?, userPass = ?, firstname = ?, lastname = ?, email = ?, phone = ?, idnumber = ?, countryId = ? WHERE id= ?';
@@ -42,6 +42,5 @@ module.exports = {
     getUsrById,
     crearUsuario,
     updateUsuario
-
 
 };
