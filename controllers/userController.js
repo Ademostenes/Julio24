@@ -18,7 +18,7 @@ const getUsrById = (req,res) => {
     });
 };
 
-const crearUsuario = (req, res) => {
+const crearUsuario = async (req, res) => {
     const {usrName, usrPass, nombres, apellido, mail, cel, idNumero, countrId} = req.body;
     const sql = 'INSERT INTO usuario (userName, userPass, firstname, lastname, email, phone, idnumber, countryId) VALUES (?,?,?,?,?,?,?,?)';
     db.query(sql,[usrName, usrPass, nombres, apellido, mail, cel, idNumero, countrId],(err,result) => {
@@ -27,7 +27,7 @@ const crearUsuario = (req, res) => {
     });
 };
 
-const updateUsuario = (req,res) => {
+const updateUsuario = (req, res) => {
     const { id } = req.params;
     const {usrName, usrPass, nombres, apellido, mail, cel, idNumero, countrId} = req.body;
     const sql = 'UPDATE usuario SET userName = ?, userPass = ?, firstname = ?, lastname = ?, email = ?, phone = ?, idnumber = ?, countryId = ? WHERE id= ?';
@@ -53,4 +53,4 @@ module.exports = {
     updateUsuario,
     borrarUsuario
 
-};
+};  
