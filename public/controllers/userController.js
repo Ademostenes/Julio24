@@ -18,10 +18,10 @@ const getUsrById = (req,res) => {
     });
 };
 
-const crearUsuario = (req, res) => {
+const crearUsuario = async (req, res) => {
     const {usrName, usrPass, nombres, apellido, mail, cel, idNumero, countrId} = req.body;
     const sql = 'INSERT INTO usuario (userName, userPass, firstname, lastname, email, phone, idnumber, countryId) VALUES (?,?,?,?,?,?,?,?)';
-    db.query(sql,[usrName, usrPass, nombres, apellido, mail, cel, idNumero, countrId],(err,result) => {
+    await db.query(sql,[usrName, usrPass, nombres, apellido, mail, cel, idNumero, countrId],(err,result) => {
         if (err) throw err;
         res.json({ message: 'Usuario creado', usrId: result.insertId});
     });
@@ -37,10 +37,20 @@ const updateUsuario = (req,res) => {
     });
 }
 
+const borrarUsuario = (req, res) => {
+    const { id } = req.params;
+    const sql = 'DELETE FROM usuario WHERE id = ?';
+    db.query(sql, [id], (err, result) => {
+        if(err) throw err;
+        res.json({message:'Usuario eliminado'});
+    });
+}
+
 module.exports = {
     getAllUsers,
     getUsrById,
     crearUsuario,
-    updateUsuario
+    updateUsuario,
+    borrarUsuario
 
 };
