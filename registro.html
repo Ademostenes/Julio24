@@ -57,25 +57,23 @@
        </div>
     </div>
         <div id="baseRegistro" >
-            <form id="register" onsubmit="mensajeValidacion()">
-                <label class="labelIzq">Nombres</label>
-                <input type="text" id="nombre" class="inputRegistro" required>
-                <label class="labelIzq">Apellidos</label>
-                <input type="text" id="apellido" class="inputRegistro" required>
-                <label class="labelIzq">Usuario</label>
-                <input type="text" id="usuario" class="inputRegistro" required>
+            <form id="register" action="/registro.html/" method="POST" enctype="application/json">
+                <label class="labelIzq">Normbre de Usuario</label>
+                <input type="text" id="usrName" name="usrName" class="inputRegistro" required>
                 <label class="labelIzq">Password</label>
-                <input type="password" id="password" class="inputRegistro" required>
-                <label class="labelIzq">Re-Ingrese Password</label>
-                <input type="password" id="password2" class="inputRegistro" required>
+                <input type="password" id="usrPass" name="usrPass" class="inputRegistro" required>
+                <label class="labelIzq">Nombres</label>
+                <input type="text" id="nombres" name="nombres" class="inputRegistro" required>
+                <label class="labelIzq">Apellido</label>
+                <input type="text" id="apellido" name="apellido" class="inputRegistro" required>
                 <label class="labelIzq">E-Mail</label>
-                <input type="text" id="email" class="inputRegistro" required>
-                <label class="labelIzq">Re-Ingrese E-Mail</label>
-                <input type="text" id="email2" class="inputRegistro" required>
-                <div class="enviar">
-                <input type="checkbox"  id="checkbok1" name="checkbox1" value="AceptoRecibirCorreo">
-                <label id="condiciones">Acepto las condiciones de uso.</label>
-                </div>
+                <input type="text" id="mail" name="mail" class="inputRegistro" required>
+                <label class="labelIzq">Celular</label>
+                <input type="text" id="cel" name="cel" class="inputRegistro" required>
+                <label class="labelIzq">DNI</label>
+                <input type="text" id="idNumero" name="idNumero" class="inputRegistro" required>
+                <label class="labelIzq">Código País</label>
+                <input type="text" id="countryId" name="countryId" class="inputRegistro" required>
                 <input type="submit" id="botonEnviar"  value="Enviar">           
             </form>    
         </div>
